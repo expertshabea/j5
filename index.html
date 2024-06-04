@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Q3 Write a program that takes input a number from user & 
+        state whether the number is positive, negative or zero</h1>
+        
+        
+        <script>
+            function classifyNumber() {
+                var number = parseFloat(document.getElementById("number").value);
+                var result = document.getElementById("result");
+            
+                if (number > 0) {
+                    result.textContent = number + " is positive.";
+                } else if (number < 0) {
+                    result.textContent = number + " is negative.";
+                } else {
+                    result.textContent = "The number is zero.";
+                }
+            }
+            </script>
+            </head>
+            <body>
+            <h2>Number Classification</h2>
+            <label for="number">Enter a number: </label>
+            <input type="number" id="number">
+            <br><br>
+            <button onclick="classifyNumber()">Classify</button>
+            <p id="result"></p> 
+
+            <h1> Write a program that takes a character (i.e. string of 
+            length 1) and returns true if it is a vowel, false otherwise</h1>
+
+            <h1>Vowel Checker</h1>
+            <label for="character">Enter a character: </label>
+            <input type="text" id="character" maxlength="1">
+            <button onclick="checkVowel()">Check</button>
+            <p id="result"></p>
+        
+            <script>
+                function isVowel(char) {
+                    // Define the vowels
+                    const vowels = 'aeiouAEIOU';
+        
+                    // Check if the character is in the vowels string
+                    return vowels.includes(char);
+                }
+        
+                function checkVowel() {
+                    // Get the character input
+                    const char = document.getElementById('character').value;
+        
+                    // Check if the character is a vowel
+                    const result = isVowel(char);
+        
+                    // Display the result
+                    document.getElementById('result').innerText = result ? `${char} true.` : `${char} False.`;
+                
+                }
+            </script>
+
+
+
+    
+</body>
+</html>
